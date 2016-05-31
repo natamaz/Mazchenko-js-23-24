@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS 23-24</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/script" src="js/require.js"></script>
+</head>
+<body>	
+		<script type="text/template" id="wrapper-template">
+			<div class="wrapper">
+				<div class="conteiner">
+					<div class="controlls">
+						<input type="text" class="item-value">
+						<button class="item-add">Add</button>
+					</div>
+					<ul class="item-list"></ul>
+				</div>
+			</div>		
+		</script>	
+		<script type="text/template" id="list-template">
+			<% for (var i = 0; i < data.length; i++){ %>
+				<li>
+					<span data-show="<%= data[i] %>" class="item-show"><%= data[i]%></span>
+					<input type="text" class="item-edit">
+					<span data-value="<%= data[i]%>" class="item-delete"> v</span>
+				</li>
+			<% } %>	
+		</script>
+</body>	
+</html>
